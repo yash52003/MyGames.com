@@ -1,0 +1,262 @@
+    /* DEFINING VARIABLES WHICH WE WILL USE DURING STYLING */
+    
+     :root {
+        --color-dark: hsl(252, 30%, 17%);
+        --color-black: hsl(252, 30%, 10%);
+        --color-danger: hsl(0, 95%, 65%);
+        --color-success: hsl(82, 95%, 65%);
+        --color-secondary: hsl(252, 100%, 90%);
+        --color-primary: hsl(252, 75%, 60%);
+        --color-gray: hsl(252, 15%, 65%);
+        --color-light: hsl(252, 30%, 95%);
+        --color-white: hsl(252, 30%, 100%);
+        --border-radius: 2rem;
+        --card-border-radius: 1rem;
+        --btn-padding: 0.6rem 2rem;
+        --search-padding: 0.6rem 1rem;
+        --card-padding: 1rem;
+        --sticky-top-left: 5.4rem;
+        --sticky-top-right: -18rem;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /************************************************** Designing Our Navbar **************************************************/
+    
+    nav {
+        width: 100%;
+        background: var(--color-white);
+        padding: 0.7rem 0;
+        top: 0;
+        z-index: 10;
+    }
+    
+    nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .body {
+        background: url("../img/bg.jpg");
+        min-height: 100vh;
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    #scoreBox {
+        color: var(--color-success);
+        position: absolute;
+        top: 9px;
+        right: 200px;
+        font-size: 39px;
+        font-weight: bold;
+        font-family: 'New Tegomin', serif;
+    }
+    
+    #hiscoreBox {
+        color: var(--color-danger);
+        position: absolute;
+        top: 59px;
+        right: 140px;
+        font-size: 39px;
+        font-weight: bold;
+        font-family: 'New Tegomin', serif;
+    }
+    
+    #board {
+        background: linear-gradient(var(--color-success), var(--color-secondary));
+        width: 90vmin;
+        height: 92vmin;
+        border: 2px solid black;
+        display: grid;
+        grid-template-rows: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 1fr);
+    }
+    
+    .head {
+        background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+        border: 2px solid rgb(34, 4, 34);
+        transform: scale(1.02);
+        border-radius: 9px;
+    }
+    
+    .snake {
+        background-color: var(--color-primary);
+        border: .25vmin solid var(--color-light);
+        border-radius: 12px;
+    }
+    
+    .food {
+        background: linear-gradient(var(--color-danger), var(--color-primary));
+        border: .25vmin solid black;
+        border-radius: 8px;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        height: 65px;
+        font-size: 27px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    .gameContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .body {
+        background: url("../img/bg.jpg");
+        min-height: 100vh;
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, 10vw);
+        grid-template-columns: repeat(3, 10vw);
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+    }
+    
+    .box {
+        border: 2px solid black;
+        font-size: 8vw;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box:hover {
+        background-color: rgb(242, 234, 250);
+    }
+    
+    .info {
+        font-size: 22px;
+    }
+    
+    .gameInfo {
+        padding: 0 34px;
+        font-family: 'Baloo Bhaina 2', cursive;
+    }
+    
+    .gameInfo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ttt .imgbox img {
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
+    
+    .br-0 {
+        border-right: 0;
+    }
+    
+    .bl-0 {
+        border-left: 0;
+    }
+    
+    .bt-0 {
+        border-top: 0;
+    }
+    
+    .bb-0 {
+        border-bottom: 0;
+    }
+    
+    #reset {
+        margin: 0 23px;
+        padding: 1px 18px;
+        background: #f3e7f9;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: 'Baloo Bhaina 2';
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    
+    .line {
+        background-color: black;
+        height: 3px;
+        width: 0;
+        position: absolute;
+        background-color: var(--color-primary);
+        transition: width 1s ease-in-out;
+    }
+    
+    @media screen and (max-width: 950px) {
+        .gameContainer {
+            flex-wrap: wrap;
+        }
+        .gameInfo {
+            margin-top: 34px;
+        }
+        .gameInfo h1 {
+            font-size: 1.5rem;
+        }
+        .container {
+            grid-template-rows: repeat(3, 20vw);
+            grid-template-columns: repeat(3, 20vw);
+        }
+    }
+    
+    .rps {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    
+    #opponent-choice {
+        width: 240px;
+        height: 240px;
+        /* background-color: cyan; */
+        margin-top: 10px;
+    }
+    
+    #your-choice {
+        width: 240px;
+        height: 240px;
+        /* background-color: yellow; */
+        margin-top: 10px;
+    }
+    
+    #choices {
+        width: 240px;
+        height: 80px;
+        /* background-color: green; */
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    
+    #choices img {
+        width: 80px;
+        height: 80px;
+    }
